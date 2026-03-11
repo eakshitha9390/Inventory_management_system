@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6, .MuiTypography-h5 {
+  background: linear-gradient(120deg, #dedef1 0%, #038bf9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+/* Add underline animation on hover */
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, .MuiTypography-h5::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(120deg, #4e5ba0 0%, #2196f3 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after, 
+h4:hover::after, h5:hover::after, h6:hover::after,
+.MuiTypography-h5:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Specific styles for main headings */
+h1, .MuiTypography-h5 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Page title emphasis */
+.page-title {
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
